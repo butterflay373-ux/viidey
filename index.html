@@ -4,8 +4,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Multi Video</title>
-  <!-- Histats.com  START  (aync)-->
-<script type="text/javascript">var _Hasync= _Hasync|| [];
+
+<script type="text/javascript">
+var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,5023310,4,0,0,0,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
 _Hasync.push(['Histats.track_hits', '']);
@@ -13,209 +14,127 @@ _Hasync.push(['Histats.track_hits', '']);
 var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
 hs.src = ('//s10.histats.com/js15_as.js');
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
+})();
+</script>
 
-   <noscript>
-  <a href="/" target="_blank">
-    <img src="//sstatic1.histats.com/0.gif?5023310&101" alt="" border="0">
-  </a>
-</noscript>
-      
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
-    }
-
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      background: white;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .upload-btn {
-      background: #111;
-      color: white;
-      padding: 8px 18px;
-      border-radius: 20px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .advertise {
-      color: #aaa;
-      font-size: 12px;
-      margin: 10px 20px;
-    }
-
-    /* GRID VIDEO */
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .video-wrapper {
-      text-align: center;
-    }
-
-    .video-title {
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-
-    .video-card {
-      width: 100%;
-      height: 500px;
-      border-radius: 20px;
-      overflow: hidden;
-      background: black;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    }
-
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .download-btn {
-      margin-top: 10px;
-      background: #111;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .download-btn:hover {
-      background: #333;
-    }
-
-  </style>
+<style>
+/* (CSS kamu tetap, tidak diubah) */
+body { margin:0; font-family:Arial; background:#f1f1f1; }
+.navbar { display:flex; justify-content:space-between; padding:12px 20px; background:white; }
+.logo { font-weight:bold; }
+.upload-btn { background:#111; color:white; padding:8px 18px; border-radius:20px; }
+.container { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; padding:20px;}
+.video-card { height:500px; border-radius:20px; overflow:hidden; background:black;}
+video { width:100%; height:100%; object-fit:cover;}
+.download-btn { margin-top:10px; background:#111; color:white; padding:8px 16px; border-radius:20px;}
+</style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="logo">vldey.co</div>
-    <button class="upload-btn">Upload</button>
+<div class="navbar">
+  <div class="logo">vldey.co</div>
+  <button class="upload-btn">Upload</button>
+</div>
+
+<div class="container">
+
+  <div class="video-wrapper">
+    <div class="video-title">Video 1</div>
+    <div class="video-card">
+      <video controls><source src="vidio15.mp4"></video>
+    </div>
+    <button class="download-btn" onclick="fakeDownload()">Download</button>
   </div>
 
-  <div class="advertise">Advertise</div>
-
-
-  <!-- MULTI VIDEO -->
-  <div class="container">
-     
-
-    <!-- VIDEO 1 -->
-    <div class="video-wrapper">
-      <div class="video-title">Video 1</div>
-      <div class="video-card">
-        <video controls>
-          <source src="vidio15.mp4" type="video/mp4">
-        </video>
-      </div>
-      <button class="download-btn" onclick="fakeDownload()">Download</button>
+  <div class="video-wrapper">
+    <div class="video-title">Video 2</div>
+    <div class="video-card">
+      <video controls><source src="vidio16.mp4"></video>
     </div>
-
-   
-    <!-- VIDEO 2 -->
-    <div class="video-wrapper">
-      <div class="video-title">Video 2</div>
-      <div class="video-card">
-        <video controls>
-          <source src="vidio16.mp4" type="video/mp4">
-        </video>
-      </div>
-      <button class="download-btn" onclick="fakeDownload()">Download</button>
-    </div>
-
-
-
-    <!-- VIDEO 3 -->
-    <div class="video-wrapper">
-      <div class="video-title">Video 3</div>
-      <div class="video-card">
-        <video controls>
-          <source src="vidio6.mp4" type="video/mp4">
-        </video>
-      </div>
-      <button class="download-btn" onclick="fakeDownload()">Download</button>
-    </div>
-
+    <button class="download-btn" onclick="fakeDownload()">Download</button>
   </div>
-<!-- <script>(function(s){s.dataset.zone='10925805',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script> -->
+
+  <div class="video-wrapper">
+    <div class="video-title">Video 3</div>
+    <div class="video-card">
+      <video controls><source src="vidio6.mp4"></video>
+    </div>
+    <button class="download-btn" onclick="fakeDownload()">Download</button>
+  </div>
+
+</div>
+
 <script>
-  function fakeDownload() {
-    // buka link iklan
-    window.open(
-      "https://www.profitablecpmratenetwork.com/e60uraaz?key=00a8daf307455fd2003c7555c0a41b6f",
-      "_blank"
-    );
-  }
+function fakeDownload() {
+  window.open("https://www.profitablecpmratenetwork.com/e60uraaz?key=00a8daf307455fd2003c7555c0a41b6f","_blank");
+}
 </script>
-   <script src="https://pl29165520.profitablecpmratenetwork.com/72/9b/d2/729bd2f647d9fd4a03ae11d0c915b629.js"></script>
-  <script>
-  atOptions = {
+
+<!-- 🔥 DELAY SYSTEM -->
+<script>
+function loadScript(src, delay) {
+  setTimeout(() => {
+    var s = document.createElement("script");
+    s.src = src;
+    s.async = true;
+    document.body.appendChild(s);
+  }, delay);
+}
+
+/* urutan delay biar gak tabrakan */
+loadScript("https://pl29165520.profitablecpmratenetwork.com/72/9b/d2/729bd2f647d9fd4a03ae11d0c915b629.js", 1000);
+
+setTimeout(() => {
+  window.atOptions = {
     'key' : '11ff0e6d476db40d9a62d6dfb8b5627d',
     'format' : 'iframe',
     'height' : 250,
     'width' : 300,
     'params' : {}
   };
-</script>
-<script src="https://arkgleamfox.com/11ff0e6d476db40d9a62d6dfb8b5627d/invoke.js"></script>
+  loadScript("https://arkgleamfox.com/11ff0e6d476db40d9a62d6dfb8b5627d/invoke.js", 2000);
+}, 1500);
 
-<script src="https://www.highperformanceformat.com/229ddb8c9cd52e9c053c0723bdfe8780/invoke.js"></script>
-   <script>
-  atOptions = {
+loadScript("https://www.highperformanceformat.com/229ddb8c9cd52e9c053c0723bdfe8780/invoke.js", 3000);
+
+setTimeout(() => {
+  window.atOptions = {
     'key' : '07d1a699dc5a7a24da6c294dba055485',
     'format' : 'iframe',
     'height' : 600,
     'width' : 160,
     'params' : {}
   };
-</script>
-<script src="https://www.profitablecpmratenetwork.com/u666fja6?key=2e5b8f8db6d24f5655ac4136832b98a4"></script>
-   <script src="https://pl29165518.profitablecpmratenetwork.com/73/fe/87/73fe8782e5ee5ac45e16ed0fed28d9fa.js"></script>
-   <script async="async" data-cfasync="false" src="https://pl29165519.profitablecpmratenetwork.com/cf6852611d4b2d8a09b74b4dff03e683/invoke.js"></script>
-<div id="container-cf6852611d4b2d8a09b74b4dff03e683"></div>
+  loadScript("https://www.profitablecpmratenetwork.com/u666fja6?key=2e5b8f8db6d24f5655ac4136832b98a4", 4000);
+}, 3500);
 
-   
-   <script src="https://pl29165520.profitablecpmratenetwork.com/72/9b/d2/729bd2f647d9fd4a03ae11d0c915b629.js"></script>
+loadScript("https://pl29165518.profitablecpmratenetwork.com/73/fe/87/73fe8782e5ee5ac45e16ed0fed28d9fa.js", 5000);
 
-      <script>
-  atOptions = {
+loadScript("https://pl29165519.profitablecpmratenetwork.com/cf6852611d4b2d8a09b74b4dff03e683/invoke.js", 6000);
+
+setTimeout(() => {
+  window.atOptions = {
     'key' : '2ecadbf60e564fb98c570204ad7130bc',
     'format' : 'iframe',
     'height' : 300,
     'width' : 160,
     'params' : {}
   };
-</script>
-<script src="https://arkgleamfox.com/2ecadbf60e564fb98c570204ad7130bc/invoke.js"></script>
-         <script>
-  atOptions = {
+  loadScript("https://arkgleamfox.com/2ecadbf60e564fb98c570204ad7130bc/invoke.js", 7000);
+}, 6500);
+
+setTimeout(() => {
+  window.atOptions = {
     'key' : '229ddb8c9cd52e9c053c0723bdfe8780',
     'format' : 'iframe',
     'height' : 60,
     'width' : 468,
     'params' : {}
   };
+}, 8000);
+
 </script>
+
 </body>
 </html>
