@@ -168,6 +168,40 @@ video {
   color: white;
 }
 
+   .ad-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+  z-index: 99999;
+  display: none;
+}
+
+.ad-header {
+  background: #111;
+  color: white;
+  padding: 8px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ad-close {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ad-body {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
 /* Iklan biar ga brutal */
 iframe {
   max-width: 100%;
@@ -291,6 +325,37 @@ atOptions = {
   'params' : {}
 };
 </script>
+   <script>
+  const adLink = "https://omg10.com/4/10884808";
+
+  function showAd() {
+    document.getElementById("adPopup").style.display = "block";
+  }
+
+  function closeAd() {
+    document.getElementById("adPopup").style.display = "none";
+  }
+
+  function openAd() {
+    window.open(adLink, "_blank");
+  }
+
+  function randomAdLoop() {
+    let delay = Math.floor(Math.random() * (40000 - 30000)) + 30000;
+
+    setTimeout(() => {
+      showAd();
+
+      // auto hide setelah 10 detik (optional)
+      setTimeout(closeAd, 10000);
+
+      randomAdLoop(); // ulang lagi
+    }, delay);
+  }
+
+  // mulai setelah user masuk web
+  randomAdLoop();
+</script>
 <script src="https://arkgleamfox.com/2ecadbf60e564fb98c570204ad7130bc/invoke.js"></script>
 <script>
   // tampil setelah 10 detik
@@ -329,6 +394,15 @@ atOptions = {
     <p>Apakah Anda sudah berusia 18+?</p>
     <button class="age-btn yes-btn" onclick="confirmAge()">Ya</button>
     <button class="age-btn no-btn" onclick="denyAge()">Tidak</button>
+  </div>
+</div>
+   <div id="adPopup" class="ad-popup">
+  <div class="ad-header">
+    <span>Iklan</span>
+    <span class="ad-close" onclick="closeAd()">✖</span>
+  </div>
+  <div class="ad-body" onclick="openAd()">
+    <p>Klik untuk melihat penawaran menarik 🔥</p>
   </div>
 </div>
 </body>
