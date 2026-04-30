@@ -124,6 +124,49 @@ video {
   height: 50px;
   border-radius: 50%;
 }
+   /* POPUP 18+ */
+.age-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.age-box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.age-box h2 {
+  margin-bottom: 10px;
+}
+
+.age-btn {
+  margin: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.yes-btn {
+  background: green;
+  color: white;
+}
+
+.no-btn {
+  background: red;
+  color: white;
+}
 
 /* Iklan biar ga brutal */
 iframe {
@@ -249,7 +292,24 @@ atOptions = {
 };
 </script>
 <script src="https://arkgleamfox.com/2ecadbf60e564fb98c570204ad7130bc/invoke.js"></script>
+<script>
+  // tampil setelah 10 detik
+  setTimeout(() => {
+    if (!localStorage.getItem("ageConfirmed")) {
+      document.getElementById("agePopup").style.display = "flex";
+    }
+  }, 10000);
 
+  function confirmAge() {
+    localStorage.setItem("ageConfirmed", "true");
+    document.getElementById("agePopup").style.display = "none";
+  }
+
+  function denyAge() {
+    // redirect kalau belum 18+
+    window.location.href = "https://www.google.com";
+  }
+</script>
 <script>
 atOptions = {
   'key' : '229ddb8c9cd52e9c053c0723bdfe8780',
@@ -259,6 +319,13 @@ atOptions = {
   'params' : {}
 };
 </script>
-
+<div id="agePopup" class="age-popup" style="display:none;">
+  <div class="age-box">
+    <h2>Konfirmasi Usia</h2>
+    <p>Apakah Anda sudah berusia 18+?</p>
+    <button class="age-btn yes-btn" onclick="confirmAge()">Ya</button>
+    <button class="age-btn no-btn" onclick="denyAge()">Tidak</button>
+  </div>
+</div>
 </body>
 </html>
